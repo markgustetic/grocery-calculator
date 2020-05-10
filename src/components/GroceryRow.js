@@ -51,7 +51,7 @@ export default function GroceryRow(props) {
                 variant="outlined"
                 name="price"
                 value={grocery.price}
-                onChange={(e) => props.handleInputChange(i, e)}
+                onChange={(e) => props.handlePriceChange(i, e)}
               />
             </Grid>
 
