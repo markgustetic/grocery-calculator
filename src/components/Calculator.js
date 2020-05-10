@@ -41,9 +41,11 @@ function Calculator() {
   ]);
 
   const handlePriceChange = (i, e) => {
-    console.log(e.target.value);
-    //console.log(e.target.value.split("."));
-    const price = e.target.value.replace("$", "");
+    let price = e.target.value.replace("$", "");
+
+    if (price.startsWith("0")) {
+      price = price.substring(1);
+    }
 
     if (isNaN(price)) {
       return;
@@ -52,8 +54,6 @@ function Calculator() {
     if (price.includes(".")) {
       let after_decimal = price.split(".");
       let last_chars = after_decimal[after_decimal.length - 1];
-      console.log(after_decimal);
-      console.log(last_chars.length);
 
       if (last_chars.length > 2) {
         return;
@@ -67,7 +67,6 @@ function Calculator() {
       [e.target.name]: price,
     };
 
-    console.log(value);
     setGroceries(value);
   };
 
@@ -79,17 +78,7 @@ function Calculator() {
       [e.target.name]: e.target.value,
     };
 
-    console.log(groceries);
-    console.log(value);
-    //    console.log(value);
     setGroceries(value);
-
-    //setGroceries({
-    // ...groceries,
-    //  [e.target.name]: e.target.value,
-    //});
-
-    console.log(groceries);
   };
 
   const handleOptionChange = (i, e) => {

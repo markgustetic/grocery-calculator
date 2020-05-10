@@ -35,7 +35,7 @@ export default function GroceryRow(props) {
                 fullWidth
                 className={classes.paper}
                 type="text"
-                id="outlined-basic"
+                id={`${i}-name outlined-basic`}
                 variant="outlined"
                 name="name"
                 value={grocery.name}
@@ -47,7 +47,7 @@ export default function GroceryRow(props) {
                 fullWidth
                 className={classes.paper}
                 type="text"
-                id="outlined-basic"
+                id={`${i}-price outlined-basic`}
                 variant="outlined"
                 name="price"
                 value={grocery.price}
