@@ -27,7 +27,6 @@ export default function GroceryRow(props) {
 
   return (
     <div className={classes.root}>
-      hello
       {props.groceries.map((grocery, i) => {
         return (
           <Grid key={i} container spacing={1}>
