@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/grocery-calculator/static/css/main.ba4572cd.chunk.css",
-    "main.js": "/grocery-calculator/static/js/main.60ec9d39.chunk.js",
-    "main.js.map": "/grocery-calculator/static/js/main.60ec9d39.chunk.js.map",
-    "runtime-main.js": "/grocery-calculator/static/js/runtime-main.e983fa4e.js",
-    "runtime-main.js.map": "/grocery-calculator/static/js/runtime-main.e983fa4e.js.map",
-    "static/css/2.b872eaa2.chunk.css": "/grocery-calculator/static/css/2.b872eaa2.chunk.css",
-    "static/js/2.e6aa475b.chunk.js": "/grocery-calculator/static/js/2.e6aa475b.chunk.js",
-    "static/js/2.e6aa475b.chunk.js.map": "/grocery-calculator/static/js/2.e6aa475b.chunk.js.map",
+    "main.css": "/grocery-calculator/static/css/main.d1b05096.chunk.css",
+    "main.js": "/grocery-calculator/static/js/main.4a0b9547.chunk.js",
+    "main.js.map": "/grocery-calculator/static/js/main.4a0b9547.chunk.js.map",
+    "runtime-main.js": "/grocery-calculator/static/js/runtime-main.5366741b.js",
+    "runtime-main.js.map": "/grocery-calculator/static/js/runtime-main.5366741b.js.map",
+    "static/css/2.b89e3d8b.chunk.css": "/grocery-calculator/static/css/2.b89e3d8b.chunk.css",
+    "static/js/2.c9e2c844.chunk.js": "/grocery-calculator/static/js/2.c9e2c844.chunk.js",
+    "static/js/2.c9e2c844.chunk.js.map": "/grocery-calculator/static/js/2.c9e2c844.chunk.js.map",
     "index.html": "/grocery-calculator/index.html",
-    "precache-manifest.514b276ea1de9dddf6b526ca92798cfd.js": "/grocery-calculator/precache-manifest.514b276ea1de9dddf6b526ca92798cfd.js",
+    "precache-manifest.7964224f8059d2a5ca3469378f1dc80e.js": "/grocery-calculator/precache-manifest.7964224f8059d2a5ca3469378f1dc80e.js",
     "service-worker.js": "/grocery-calculator/service-worker.js",
-    "static/css/2.b872eaa2.chunk.css.map": "/grocery-calculator/static/css/2.b872eaa2.chunk.css.map",
-    "static/css/main.ba4572cd.chunk.css.map": "/grocery-calculator/static/css/main.ba4572cd.chunk.css.map",
-    "static/js/2.e6aa475b.chunk.js.LICENSE.txt": "/grocery-calculator/static/js/2.e6aa475b.chunk.js.LICENSE.txt",
+    "static/css/2.b89e3d8b.chunk.css.map": "/grocery-calculator/static/css/2.b89e3d8b.chunk.css.map",
+    "static/css/main.d1b05096.chunk.css.map": "/grocery-calculator/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.c9e2c844.chunk.js.LICENSE.txt": "/grocery-calculator/static/js/2.c9e2c844.chunk.js.LICENSE.txt",
     "static/media/index.css": "/grocery-calculator/static/media/roboto-latin-900italic.ebf6d164.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.e983fa4e.js",
-    "static/css/2.b872eaa2.chunk.css",
-    "static/js/2.e6aa475b.chunk.js",
-    "static/css/main.ba4572cd.chunk.css",
-    "static/js/main.60ec9d39.chunk.js"
+    "static/js/runtime-main.5366741b.js",
+    "static/css/2.b89e3d8b.chunk.css",
+    "static/js/2.c9e2c844.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.4a0b9547.chunk.js"
   ]
 }
