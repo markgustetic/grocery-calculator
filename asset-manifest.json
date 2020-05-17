@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/grocery-calculator/static/css/main.d1b05096.chunk.css",
-    "main.js": "/grocery-calculator/static/js/main.4a0b9547.chunk.js",
-    "main.js.map": "/grocery-calculator/static/js/main.4a0b9547.chunk.js.map",
+    "main.js": "/grocery-calculator/static/js/main.d28375f3.chunk.js",
+    "main.js.map": "/grocery-calculator/static/js/main.d28375f3.chunk.js.map",
     "runtime-main.js": "/grocery-calculator/static/js/runtime-main.5366741b.js",
     "runtime-main.js.map": "/grocery-calculator/static/js/runtime-main.5366741b.js.map",
     "static/css/2.b89e3d8b.chunk.css": "/grocery-calculator/static/css/2.b89e3d8b.chunk.css",
     "static/js/2.c9e2c844.chunk.js": "/grocery-calculator/static/js/2.c9e2c844.chunk.js",
     "static/js/2.c9e2c844.chunk.js.map": "/grocery-calculator/static/js/2.c9e2c844.chunk.js.map",
     "index.html": "/grocery-calculator/index.html",
-    "precache-manifest.7964224f8059d2a5ca3469378f1dc80e.js": "/grocery-calculator/precache-manifest.7964224f8059d2a5ca3469378f1dc80e.js",
+    "precache-manifest.58a5537fc14f7a8105261f00f85cd6b5.js": "/grocery-calculator/precache-manifest.58a5537fc14f7a8105261f00f85cd6b5.js",
     "service-worker.js": "/grocery-calculator/service-worker.js",
     "static/css/2.b89e3d8b.chunk.css.map": "/grocery-calculator/static/css/2.b89e3d8b.chunk.css.map",
     "static/css/main.d1b05096.chunk.css.map": "/grocery-calculator/static/css/main.d1b05096.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.b89e3d8b.chunk.css",
     "static/js/2.c9e2c844.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.4a0b9547.chunk.js"
+    "static/js/main.d28375f3.chunk.js"
   ]
 }
