@@ -1,6 +1,6 @@
 {
-  "homepage": "https://markgustetic.github.io/grocery-calculator/",
   "name": "grocery-calculator",
+  "homepage": "https://markgustetic.github.io/grocery-calculator/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
