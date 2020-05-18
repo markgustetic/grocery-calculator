@@ -6,6 +6,8 @@ import Paper from "@material-ui/core/Paper";
 import GroceryRow from "./GroceryRow";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
+import Fab from "@material-ui/core/Fab";
+import AddIcon from "@material-ui/icons/Add";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -95,6 +97,8 @@ function Calculator() {
   const addGroceryRow = () =>
     setGroceries([...groceries, { name: "", price: 0, owner: "split" }]);
 
+  const resetGroceries = () => setGroceries([]);
+
   const totalGroceries = () =>
     groceries.reduce((a, item) => a + Number(item.price), 0);
 
@@ -163,6 +167,15 @@ function Calculator() {
           >
             Add groceries
           </Button>
+          <Button
+            variant="contained"
+            color="warning"
+            size="large"
+            align="center"
+            onClick={() => resetGroceries()}
+          >
+            Reset
+          </Button>
         </Container>
       </div>
       <Container>
@@ -187,6 +200,9 @@ function Calculator() {
             />
           </Grid>
         </div>
+        <Fab color="primary" aria-label="add">
+          <AddIcon onClick={() => addGroceryRow()} />
+        </Fab>
       </Container>
     </div>
   );
