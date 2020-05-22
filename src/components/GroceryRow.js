@@ -8,11 +8,11 @@ import Radio from "@material-ui/core/Radio";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
+import Autocomplete from "@material-ui/lab/Autocomplete";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-
     flexWrap: "wrap",
   },
   paper: {
@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
 }));
+
+const groceryList = [
+  { name: "Dog Food" },
+  { name: "Cat Food" },
+  { name: "Laundry Detergent" },
+];
 
 export default function GroceryRow(props) {
   const classes = useStyles();
@@ -31,15 +37,26 @@ export default function GroceryRow(props) {
         return (
           <Grid key={i} container spacing={1}>
             <Grid item xs={3}>
-              <TextField
-                fullWidth
+              <Autocomplete
+                freeSolo
+                //fullWidth
                 className={classes.paper}
-                type="text"
-                id={`${i}-name outlined-basic`}
-                variant="outlined"
-                name="name"
                 value={grocery.name}
+                options={groceryList.map((option) => option.name)}
                 onChange={(e) => props.handleInputChange(i, e)}
+                renderInput={(params) => (
+                  <TextField
+                    //  fullWidth
+                    //className={classes.paper}
+                    type="text"
+                    id={`${i}-name outlined-basic`}
+                    variant="outlined"
+                    {...params}
+                    label="Grocery Name"
+                    margin="normal"
+                    onChange={(e) => props.handleInputChange(i, e)}
+                  />
+                )}
               />
             </Grid>
             <Grid item xs={3}>
@@ -50,14 +67,15 @@ export default function GroceryRow(props) {
                 id={`${i}-price outlined-basic`}
                 variant="outlined"
                 name="price"
+                margin="normal"
                 value={grocery.price}
                 onChange={(e) => props.handlePriceChange(i, e)}
               />
             </Grid>
 
             <Grid item xs={3} align="center">
-              <Paper className={classes.paper}>
-                <FormControl className={classes.paper} component="fieldset">
+              <Paper>
+                <FormControl margin="normal" component="fieldset">
                   <RadioGroup
                     row
                     aria-label="mark"
@@ -85,7 +103,7 @@ export default function GroceryRow(props) {
             </Grid>
 
             <Grid item>
-              <Paper className={classes.paper}>
+              <Paper>
                 <Button type="button" onClick={() => props.handleRemove(i)}>
                   X
                 </Button>

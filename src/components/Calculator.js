@@ -169,7 +169,7 @@ function Calculator() {
           </Button>
           <Button
             variant="contained"
-            color="warning"
+            color="secondary"
             size="large"
             align="center"
             onClick={() => resetGroceries()}
