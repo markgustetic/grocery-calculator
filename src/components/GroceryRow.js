@@ -20,6 +20,16 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     color: theme.palette.text.secondary,
   },
+  formpaper: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 15,
+    height: 55,
+  },
+  closebutton: {
+    height: 53,
+  },
 }));
 
 const groceryList = [
@@ -73,8 +83,8 @@ export default function GroceryRow(props) {
               />
             </Grid>
 
-            <Grid item xs={3} align="center">
-              <Paper>
+            <Grid item xs={3}>
+              <Paper className={classes.formpaper}>
                 <FormControl margin="normal" component="fieldset">
                   <RadioGroup
                     row
@@ -103,8 +113,12 @@ export default function GroceryRow(props) {
             </Grid>
 
             <Grid item>
-              <Paper>
-                <Button type="button" onClick={() => props.handleRemove(i)}>
+              <Paper className={classes.formpaper}>
+                <Button
+                  className={classes.closebutton}
+                  type="button"
+                  onClick={() => props.handleRemove(i)}
+                >
                   X
                 </Button>
               </Paper>

@@ -158,24 +158,30 @@ function Calculator() {
 
       <div>
         <Container>
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            align="center"
-            onClick={() => addGroceryRow()}
-          >
-            Add groceries
-          </Button>
-          <Button
-            variant="contained"
-            color="secondary"
-            size="large"
-            align="center"
-            onClick={() => resetGroceries()}
-          >
-            Reset
-          </Button>
+          <Grid container spacing={1}>
+            <Grid item xs={2}>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                align="center"
+                onClick={() => addGroceryRow()}
+              >
+                Add groceries
+              </Button>
+            </Grid>
+            <Grid item xs={1}>
+              <Button
+                variant="contained"
+                color="secondary"
+                size="large"
+                align="center"
+                onClick={() => resetGroceries()}
+              >
+                Reset
+              </Button>
+            </Grid>
+          </Grid>
         </Container>
       </div>
       <Container>
