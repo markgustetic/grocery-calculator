@@ -9,6 +9,8 @@ import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Autocomplete from "@material-ui/lab/Autocomplete";
+import RemoveIcon from "@material-ui/icons/Remove";
+import Fab from "@material-ui/core/Fab";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
   closebutton: {
     height: 53,
   },
+  removeButton: {
+    marginTop: 15,
+  },
 }));
 
 const groceryList = [
@@ -49,15 +54,12 @@ export default function GroceryRow(props) {
             <Grid item xs={3}>
               <Autocomplete
                 freeSolo
-                //fullWidth
                 className={classes.paper}
                 value={grocery.name}
                 options={groceryList.map((option) => option.name)}
                 onChange={(e) => props.handleInputChange(i, e)}
                 renderInput={(params) => (
                   <TextField
-                    //  fullWidth
-                    //className={classes.paper}
                     type="text"
                     id={`${i}-name outlined-basic`}
                     variant="outlined"
@@ -78,6 +80,7 @@ export default function GroceryRow(props) {
                 variant="outlined"
                 name="price"
                 margin="normal"
+                label="Price"
                 value={grocery.price}
                 onChange={(e) => props.handlePriceChange(i, e)}
               />
@@ -111,17 +114,14 @@ export default function GroceryRow(props) {
                 </FormControl>
               </Paper>
             </Grid>
-
             <Grid item>
-              <Paper className={classes.formpaper}>
-                <Button
-                  className={classes.closebutton}
-                  type="button"
-                  onClick={() => props.handleRemove(i)}
-                >
-                  X
-                </Button>
-              </Paper>
+              <Fab
+                className={classes.removeButton}
+                color="secondary"
+                aria-label="remove"
+              >
+                <RemoveIcon onClick={() => props.handleRemove(i)} />
+              </Fab>
             </Grid>
           </Grid>
         );

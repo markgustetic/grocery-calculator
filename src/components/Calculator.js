@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import GroceryRow from "./GroceryRow";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -156,7 +155,7 @@ function Calculator() {
         </Container>
       </div>
 
-      <div>
+      <div className={classes.root}>
         <Container>
           <Grid container spacing={1}>
             <Grid item xs={2}>
@@ -187,16 +186,6 @@ function Calculator() {
       <Container>
         <div className={classes.root}>
           <Grid container spacing={1}>
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>Grocery Name</Paper>
-            </Grid>
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>Price</Paper>
-            </Grid>
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>Owner</Paper>
-            </Grid>
-
             <GroceryRow
               groceries={groceries}
               handleInputChange={handleInputChange}
