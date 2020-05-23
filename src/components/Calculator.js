@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -20,16 +20,31 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const defaultGroceries = [
+  {
+    groceryName: "",
+    price: 0,
+    owner: "split",
+  },
+];
+
 function Calculator() {
   const classes = useStyles();
 
-  const [groceries, setGroceries] = useState([
-    {
-      name: "",
-      price: 0,
-      owner: "split",
-    },
-  ]);
+  const [groceries, setGroceries] = useState(() => {
+    const localGroceries = window.localStorage.getItem("groceries");
+
+    console.log(localGroceries);
+
+    return localGroceries !== null
+      ? JSON.parse(localGroceries)
+      : defaultGroceries;
+  });
+
+  useEffect(() => {
+    console.log("saving");
+    window.localStorage.setItem("groceries", JSON.stringify(groceries));
+  }, [groceries]);
 
   const handlePriceChange = (i, e) => {
     let price = e.target.value.replace("$", "");
@@ -43,10 +58,10 @@ function Calculator() {
     }
 
     if (price.includes(".")) {
-      let after_decimal = price.split(".");
-      let last_chars = after_decimal[after_decimal.length - 1];
+      let afterDecimal = price.split(".");
+      let lastChars = afterDecimal[afterDecimal.length - 1];
 
-      if (last_chars.length > 2) {
+      if (lastChars.length > 2) {
         return;
       }
     }
@@ -61,12 +76,16 @@ function Calculator() {
     setGroceries(value);
   };
 
-  const handleInputChange = (i, e) => {
+  const handleGroceryChange = (i, e, v) => {
+    if (e === null) {
+      return;
+    }
+
     const value = [...groceries];
 
     value[i] = {
       ...groceries[i],
-      [e.target.name]: e.target.value,
+      groceryName: v,
     };
 
     setGroceries(value);
@@ -84,7 +103,7 @@ function Calculator() {
     setGroceries((groceries) => groceries.filter((item, index) => i !== index));
 
   const addGroceryRow = () =>
-    setGroceries([...groceries, { name: "", price: 0, owner: "split" }]);
+    setGroceries([...groceries, { groceryName: "", price: 0, owner: "split" }]);
 
   const resetGroceries = () => setGroceries([]);
 
@@ -178,7 +197,7 @@ function Calculator() {
           <Grid container spacing={1}>
             <GroceryRow
               groceries={groceries}
-              handleInputChange={handleInputChange}
+              handleInputChange={handleGroceryChange}
               handlePriceChange={handlePriceChange}
               handleOptionChange={handleOptionChange}
               handleRemove={handleRemove}

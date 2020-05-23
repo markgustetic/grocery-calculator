@@ -61,9 +61,9 @@ export default function GroceryRow(props) {
               <Autocomplete
                 freeSolo
                 className={classes.paper}
-                value={grocery.name}
+                value={grocery.groceryName}
                 options={groceryList.map((option) => option.name)}
-                onChange={(e) => props.handleInputChange(i, e)}
+                onInputChange={(e, v) => props.handleGroceryChange(i, e, v)}
                 renderInput={(params) => (
                   <TextField
                     type="text"
@@ -71,8 +71,8 @@ export default function GroceryRow(props) {
                     variant="outlined"
                     {...params}
                     label="Grocery Name"
+                    name="groceryName"
                     margin="normal"
-                    onChange={(e) => props.handleInputChange(i, e)}
                   />
                 )}
               />
@@ -99,6 +99,7 @@ export default function GroceryRow(props) {
                     row
                     aria-label="mark"
                     value={grocery.owner}
+                    name="owner"
                     onChange={(e) => props.handleOptionChange(i, e)}
                   >
                     <FormControlLabel
