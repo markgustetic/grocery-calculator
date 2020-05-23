@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "47aec2b6ac9c90d383cbb0c9d8be4c9f",
+    "revision": "9a5c94790912a9c792481f0de3529f1d",
     "url": "/grocery-calculator/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/grocery-calculator/static/css/2.b89e3d8b.chunk.css"
   },
   {
-    "revision": "e829844f2678bea8a24e",
+    "revision": "90466b64eb464006ad15",
     "url": "/grocery-calculator/static/css/main.d1b05096.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/grocery-calculator/static/js/2.c91f8ca9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e829844f2678bea8a24e",
-    "url": "/grocery-calculator/static/js/main.a6b4d19b.chunk.js"
+    "revision": "90466b64eb464006ad15",
+    "url": "/grocery-calculator/static/js/main.54d5a9c6.chunk.js"
   },
   {
     "revision": "9c7209c3f45ec50027c6",
