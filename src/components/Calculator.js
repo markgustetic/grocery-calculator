@@ -25,18 +25,8 @@ function Calculator() {
 
   const [groceries, setGroceries] = useState([
     {
-      name: "Dog Food",
-      price: 10.15,
-      owner: "mark",
-    },
-    {
-      name: "Cat Food",
-      price: 11.5,
-      owner: "alissa",
-    },
-    {
-      name: "TV",
-      price: 50.5,
+      name: "",
+      price: 0,
       owner: "split",
     },
   ]);
@@ -195,8 +185,8 @@ function Calculator() {
             />
           </Grid>
         </div>
-        <Fab color="primary" aria-label="add">
-          <AddIcon onClick={() => addGroceryRow()} />
+        <Fab color="primary" aria-label="add" onClick={() => addGroceryRow()}>
+          <AddIcon />
         </Fab>
       </Container>
     </div>

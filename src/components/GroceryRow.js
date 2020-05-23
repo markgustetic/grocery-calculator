@@ -125,8 +125,9 @@ export default function GroceryRow(props) {
                 className={classes.removeButton}
                 color="secondary"
                 aria-label="remove"
+                onClick={() => props.handleRemove(i)}
               >
-                <RemoveIcon onClick={() => props.handleRemove(i)} />
+                <RemoveIcon />
               </Fab>
             </Grid>
           </Grid>
