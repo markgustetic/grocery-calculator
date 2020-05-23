@@ -39,7 +39,14 @@ const useStyles = makeStyles((theme) => ({
 const groceryList = [
   { name: "Dog Food" },
   { name: "Cat Food" },
-  { name: "Laundry Detergent" },
+  { name: "Frozen Chicken" },
+  { name: "Bottled Water" },
+  { name: "Onions" },
+  { name: "Chicken Wings" },
+  { name: "Chicken Breast" },
+  { name: "Steak" },
+  { name: "Cheese" },
+  { name: "Tortillas" },
 ];
 
 export default function GroceryRow(props) {
