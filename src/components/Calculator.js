@@ -34,15 +34,12 @@ function Calculator() {
   const [groceries, setGroceries] = useState(() => {
     const localGroceries = window.localStorage.getItem("groceries");
 
-    console.log(localGroceries);
-
     return localGroceries !== null
       ? JSON.parse(localGroceries)
       : defaultGroceries;
   });
 
   useEffect(() => {
-    console.log("saving");
     window.localStorage.setItem("groceries", JSON.stringify(groceries));
   }, [groceries]);
 
