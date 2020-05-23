@@ -197,7 +197,7 @@ function Calculator() {
           <Grid container spacing={1}>
             <GroceryRow
               groceries={groceries}
-              handleInputChange={handleGroceryChange}
+              handleGroceryChange={handleGroceryChange}
               handlePriceChange={handlePriceChange}
               handleOptionChange={handleOptionChange}
               handleRemove={handleRemove}
